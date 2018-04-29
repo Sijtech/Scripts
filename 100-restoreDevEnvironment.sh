@@ -5,18 +5,14 @@ cp /tmp/devEnv/invheader-customer_39.sql /home/sij/Documents/
 chown sij:sij /home/sij/Documents/* -R
 cp -r /tmp/devEnv/2stpf/ /var/www/
 chown www-data:www-data /var/www/2stpf -R
-
-#create tmp directory
-mkdir -p /tmp/$Timestamp-devEnv
-#copy web directory and sql backup file
-cp -r /var/www/2stpf /tmp/$Timestamp-devEnv
-cp -r /home/sij/Dokumente/invheader-customer_39.sql /tmp/$Timestamp-devEnv
-#change directory
-cd /tmp/$Timestamp-devEnv
-#create tar.gz on shared storage with host os
-zip -r /media/sf_VB-LX-Shared/$Timestamp-devEnv.zip *
-#tar -zcf /media/sf_VB-LX-Shared/$Timestamp-devEnv.tar.gz *
+chmod 775 /var/www/2stpf -R
 
 
 
-GRANT ALL PRIVILEGES ON myFirstGrid.* TO 'jqgrid'@'localhost';
+#create database myFirstGrid;
+#create user 'jqgrid'@'localhost' identified by 'jqgrid';
+#GRANT ALL PRIVILEGES ON myFirstGrid.* TO 'jqgrid'@'localhost';
+#show grants for 'jqgrid'@'localhost';
+
+#php7.2-mysql
+#libapache2-mod-php
