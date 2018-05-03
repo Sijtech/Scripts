@@ -6,7 +6,7 @@ Timestamp=$(date +%Y%m%d_%H-%M)
 mkdir -p /tmp/$Timestamp-devEnv
 #copy web directory and sql backup file
 cp -r /var/www/2stpf /tmp/$Timestamp-devEnv
-cp -r /home/sij/Documents/invheader-customer_39.sql /tmp/$Timestamp-devEnv
+#cp -r /home/sij/Documents/invheader-customer_39.sql /tmp/$Timestamp-devEnv
 #change directory
 cd /tmp/$Timestamp-devEnv
 #create tar.gz on shared storage with host os
